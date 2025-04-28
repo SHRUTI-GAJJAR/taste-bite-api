@@ -1,0 +1,25 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "description": "taste bite api - web project",
+  "homepage": "https://github.com/SHRUTI-GAJJAR/taste-bite-api#readme",
+  "bugs": {
+    "url": "https://github.com/SHRUTI-GAJJAR/taste-bite-api/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SHRUTI-GAJJAR/taste-bite-api.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.5.0",
+    "simple-node-logger": "^21.8.12"
+  }
+}
