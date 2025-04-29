@@ -24,9 +24,7 @@ const allowedOrigins = [
             return callback(new Error('Not allowed by CORS')); 
         }
     },
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type'],
-    credentials: true, 
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
 }));
   
 // Middleware for parsing incoming JSON
