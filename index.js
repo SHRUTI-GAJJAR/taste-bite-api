@@ -1,6 +1,6 @@
 
-
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const mongoose = require('mongoose');
 const connectDB = require('./db');
@@ -9,6 +9,24 @@ const fs = require('fs');
 require('dotenv').config();
 const bodyParser = require('body-parser');
 
+// CORS configuration
+const allowedOrigins = [
+    'http://localhost:5173',
+    'https://your-project-name.vercel.app',
+  ];
+  
+  app.use(cors({
+    origin: function (origin, callback) {
+      // allow requests with no origin like mobile apps or curl
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      } else {
+        return callback(new Error('Not allowed by CORS'));
+      }
+    }
+  }));
+  
 // Middleware for parsing incoming JSON
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
