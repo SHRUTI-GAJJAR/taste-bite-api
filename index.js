@@ -17,17 +17,17 @@ const allowedOrigins = [
   
   app.use(cors({
     origin: function (origin, callback) {
-      if (!origin) return callback(null, true);
-      if (allowedOrigins.includes(origin)) {
-        return callback(null, true);
-      } else {
-        return callback(new Error('Not allowed by CORS'));
-      }
+        if (!origin) return callback(null, true); 
+        if (allowedOrigins.includes(origin)) {
+            return callback(null, true); 
+        } else {
+            return callback(new Error('Not allowed by CORS')); 
+        }
     },
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true
-  }));
+    credentials: true, 
+}));
   
 // Middleware for parsing incoming JSON
 app.use(express.json());
