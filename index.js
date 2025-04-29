@@ -12,7 +12,7 @@ const bodyParser = require('body-parser');
 // CORS configuration
 const allowedOrigins = [
     'http://localhost:5173',
-    'tastebiteapp.vercel.app',
+    'https://tastebiteapp.vercel.app',
   ];
   
   app.use(cors({
