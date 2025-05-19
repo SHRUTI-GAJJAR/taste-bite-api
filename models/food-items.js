@@ -8,6 +8,7 @@ const foodItemSchema = new mongoose.Schema({
   Thumbnail_img: { type: String },
   rating: { type: Number, min: 0, max: 5, default: 0 },
   cookingTime: { type: String },
+  full_recipe: { type: mongoose.Schema.Types.ObjectId, ref: 'Recipe' },
 });
 
 // Increment after save
