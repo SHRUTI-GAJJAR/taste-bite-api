@@ -30,7 +30,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.get("/generate-categories", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     // Get all items
     const items = await FoodItem.find();
