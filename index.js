@@ -32,7 +32,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Establish DB connection
-connectDB();  // Connect to MongoDB
+connectDB(); 
 
 
 // For Items:
@@ -54,6 +54,10 @@ app.use('/recipe', recipeRouter);
 app.use('/profile', express.static(path.join(__dirname, 'profile')));
 const authRoutes = require('./routers/auth');
 app.use('/auth', authRoutes);
+
+//category_count;
+const categoryDetailsRoute = require("./routers/CategoryDetails_r");
+app.use("/category_count", categoryDetailsRoute);
 
 
 // Start the server
